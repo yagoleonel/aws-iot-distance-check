@@ -1,0 +1,142 @@
+[
+  {
+    "VehicleMacAddress": "1:0:0:0:0:0",
+    "HandheldMacAddress": "0:0:3:0:0:0",
+    "VehiclePosition": {
+      "latitude": "52.3781502",
+      "longitude": "4.8968106",
+      "lastUpdate": "2023-08-13T17:35:34.873Z"
+    },
+    "HandheldPosition": {
+      "latitude": "52.3777130",
+      "longitude": "4.8971263",
+      "lastUpdate": "2023-08-13T17:35:34.873Z"
+    }
+  },
+  {
+    "VehicleMacAddress": "0:0:0:28:95:0",
+    "HandheldMacAddress": "0:1:0:0:0:38",
+    "VehiclePosition": {
+      "latitude": "52.3776269",
+      "longitude": "4.8973436",
+      "lastUpdate": "2023-08-13T17:35:34.873Z"
+    },
+    "HandheldPosition": {
+      "latitude": "52.3779691",
+      "longitude": "4.8970151",
+      "lastUpdate": "2023-08-13T17:35:34.873Z"
+    }
+  },
+  {
+    "VehicleMacAddress": "0:19:0:0:86:0",
+    "HandheldMacAddress": "72:0:0:0:0:90",
+    "VehiclePosition": {
+      "latitude": "52.3782421",
+      "longitude": "4.8971778",
+      "lastUpdate": "2023-08-13T17:35:34.873Z"
+    },
+    "HandheldPosition": {
+      "latitude": "52.3781721",
+      "longitude": "4.8971943",
+      "lastUpdate": "2023-08-13T17:35:34.873Z"
+    }
+  },
+  {
+    "VehicleMacAddress": "0:0:0:52:49:0",
+    "HandheldMacAddress": "68:27:0:0:0:84",
+    "VehiclePosition": {
+      "latitude": "52.3783199",
+      "longitude": "4.8972081",
+      "lastUpdate": "2023-08-13T17:35:34.873Z"
+    },
+    "HandheldPosition": {
+      "latitude": "52.3783236",
+      "longitude": "4.8971686",
+      "lastUpdate": "2023-08-13T17:35:34.873Z"
+    }
+  },
+  {
+    "VehicleMacAddress": "74:0:46:0:0:0",
+    "HandheldMacAddress": "0:24:0:77:74:0",
+    "VehiclePosition": {
+      "latitude": "52.3782784",
+      "longitude": "4.8966587",
+      "lastUpdate": "2023-08-13T17:35:34.874Z"
+    },
+    "HandheldPosition": {
+      "latitude": "52.3780507",
+      "longitude": "4.8974210",
+      "lastUpdate": "2023-08-13T17:35:34.874Z"
+    }
+  },
+  {
+    "VehicleMacAddress": "0:50:0:0:47:0",
+    "HandheldMacAddress": "90:7:0:0:0:0",
+    "VehiclePosition": {
+      "latitude": "52.3777593",
+      "longitude": "4.8971068",
+      "lastUpdate": "2023-08-13T17:35:34.874Z"
+    },
+    "HandheldPosition": {
+      "latitude": "52.3780603",
+      "longitude": "4.8968982",
+      "lastUpdate": "2023-08-13T17:35:34.874Z"
+    }
+  },
+  {
+    "VehicleMacAddress": "95:0:0:0:0:0",
+    "HandheldMacAddress": "0:6:76:0:0:88",
+    "VehiclePosition": {
+      "latitude": "52.3778842",
+      "longitude": "4.8968548",
+      "lastUpdate": "2023-08-13T17:35:34.874Z"
+    },
+    "HandheldPosition": {
+      "latitude": "52.3783658",
+      "longitude": "4.8966386",
+      "lastUpdate": "2023-08-13T17:35:34.874Z"
+    }
+  },
+  {
+    "VehicleMacAddress": "0:49:17:94:0:25",
+    "HandheldMacAddress": "0:0:0:0:0:0",
+    "VehiclePosition": {
+      "latitude": "52.3777519",
+      "longitude": "4.8969705",
+      "lastUpdate": "2023-08-13T17:35:34.874Z"
+    },
+    "HandheldPosition": {
+      "latitude": "52.3780037",
+      "longitude": "4.8966961",
+      "lastUpdate": "2023-08-13T17:35:34.874Z"
+    }
+  },
+  {
+    "VehicleMacAddress": "76:0:26:0:87:50",
+    "HandheldMacAddress": "0:0:39:44:0:0",
+    "VehiclePosition": {
+      "latitude": "52.3779053",
+      "longitude": "4.8972946",
+      "lastUpdate": "2023-08-13T17:35:34.874Z"
+    },
+    "HandheldPosition": {
+      "latitude": "52.3781619",
+      "longitude": "4.8972793",
+      "lastUpdate": "2023-08-13T17:35:34.874Z"
+    }
+  },
+  {
+    "VehicleMacAddress": "0:0:0:0:49:0",
+    "HandheldMacAddress": "0:18:27:56:93:0",
+    "VehiclePosition": {
+      "latitude": "52.3775879",
+      "longitude": "4.8975469",
+      "lastUpdate": "2023-08-13T17:35:34.874Z"
+    },
+    "HandheldPosition": {
+      "latitude": "52.3781161",
+      "longitude": "4.8973450",
+      "lastUpdate": "2023-08-13T17:35:34.874Z"
+    }
+  }
+]
