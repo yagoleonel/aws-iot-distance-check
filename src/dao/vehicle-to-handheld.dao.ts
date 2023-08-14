@@ -50,7 +50,7 @@ export class VehicleToHandheldDAO {
       const sortKey = vehicleData.HandheldMacAddress;
 
       try {
-        await this.doUpdatePosition({ primaryKey, sortKey, position, field: 'VechiclePosition' })
+        await this.doUpdatePosition({ primaryKey, sortKey, position, field: 'VehiclePosition' })
       } catch (error) {
         console.error('Error updating vehicle position', error);
         throw error;
