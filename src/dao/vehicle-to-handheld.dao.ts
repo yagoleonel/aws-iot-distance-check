@@ -46,22 +46,11 @@ export class VehicleToHandheldDAO {
 
     async updateVehiclePosition (vehicleData: Vehicle2Handheld): Promise<void> {
       const position = vehicleData.VehiclePosition;
-      const primaryKey = vehicleData.VehicleMacAddress
-      const sortKey = vehicleData.VehicleMacAddress
-
-      const params: AWS.DynamoDB.DocumentClient.UpdateItemInput = {
-        TableName: this.tableName,
-        Key: { VehicleMacAddress: primaryKey, HandheldMacAddress: sortKey }, // Primary key
-        UpdateExpression: `SET VehiclePosition = :position`,
-        ExpressionAttributeValues: {
-          ':position': JSON.stringify(position),
-        },
-      };
-      
-      console.log(params);
+      const primaryKey = vehicleData.VehicleMacAddress;
+      const sortKey = vehicleData.HandheldMacAddress;
 
       try {
-        await this.dynamodb.update(params).promise();
+        await this.doUpdatePosition({ primaryKey, sortKey, position, field: 'VechiclePosition' })
       } catch (error) {
         console.error('Error updating vehicle position', error);
         throw error;
@@ -71,21 +60,25 @@ export class VehicleToHandheldDAO {
     async updateHandheldPosition (handheldData: Vehicle2Handheld): Promise<void> {
       const position = handheldData.HandheldPosition;
       const primaryKey = handheldData.VehicleMacAddress;
-
-      const params: AWS.DynamoDB.DocumentClient.UpdateItemInput = {
-        TableName: this.tableName,
-        Key: { VehicleMacAddress: primaryKey }, // Primary key
-        UpdateExpression: `SET HandheldPosition = :position`,
-        ExpressionAttributeValues: {
-          ':position': position,
-        },
-      };
+      const sortKey = handheldData.HandheldMacAddress;
       
       try {
-        await this.dynamodb.update(params).promise();
+        await this.doUpdatePosition({ primaryKey, sortKey, position, field: 'HandheldPosition' })
       } catch (error) {
-        console.error('Error updating vehicle position', error);
+        console.error('Error updating handheld position', error);
         throw error;
       }
+    }
+
+    async doUpdatePosition({ primaryKey, sortKey, position, field }: { primaryKey: string, sortKey: string, position: Record<string, any>, field: string }): Promise<void> {
+      const params: AWS.DynamoDB.DocumentClient.UpdateItemInput = {
+        TableName: this.tableName,
+        Key: { VehicleMacAddress: primaryKey, HandheldMacAddress: sortKey }, // Primary key
+        UpdateExpression: `SET ${field} = :position`,
+        ExpressionAttributeValues: {
+          ':position': JSON.stringify(position),
+        },
+      };
+      await this.dynamodb.update(params).promise();
     }
 }
