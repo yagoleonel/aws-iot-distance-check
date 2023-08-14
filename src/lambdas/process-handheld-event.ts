@@ -27,7 +27,11 @@ export const handler = async (event: SQSEvent, context?: Context): Promise<void>
         return;
       }
 
-      handHeldData.HandheldPosition.lastUpdate = new Date().toISOString();
+      handHeldData.VehiclePosition = {
+        lastUpdate: body.timestamp,
+        latitude: body.latitude,
+        longitude: body.longitude
+      };
 
       await vehicleToHandheldDAO.updateHandheldPosition(handHeldData); /// TODO: pass only position here and not the entire object
     }
