@@ -47,10 +47,11 @@ export class VehicleToHandheldDAO {
     async updateVehiclePosition (vehicleData: Vehicle2Handheld): Promise<void> {
       const position = vehicleData.VehiclePosition;
       const primaryKey = vehicleData.VehicleMacAddress
+      const sortKey = vehicleData.VehicleMacAddress
 
       const params: AWS.DynamoDB.DocumentClient.UpdateItemInput = {
         TableName: this.tableName,
-        Key: AWS.DynamoDB.Converter.marshall({ "VehicleMacAddress": primaryKey }), // Primary key
+        Key: { VehicleMacAddress: primaryKey, HandheldMacAddress: sortKey }, // Primary key
         UpdateExpression: `SET VehiclePosition = :position`,
         ExpressionAttributeValues: {
           ':position': JSON.stringify(position),
