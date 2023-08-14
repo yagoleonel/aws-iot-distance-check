@@ -12,7 +12,12 @@ export const handler = async (event: DynamoDBStreamEvent, context?: Context): Pr
   try {
     for (const record of event.Records) {
       if (record.dynamodb?.NewImage) {
+
+        console.log('RECORD', JSON.stringify(record));
+
         const vehicleToHandheldData = AWS.DynamoDB.Converter.unmarshall(record.dynamodb?.NewImage) as Vehicle2Handheld;
+
+        console.log('DATA', vehicleToHandheldData);
 
         const vehiclePosition = vehicleToHandheldData.VehiclePosition;
         const handheldPosition = vehicleToHandheldData.HandheldPosition;
