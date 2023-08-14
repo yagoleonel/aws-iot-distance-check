@@ -20,7 +20,7 @@ export class IotDeviceDistanceCheckStack extends cdk.Stack {
         type: dynamodb.AttributeType.STRING,
       },
       removalPolicy: cdk.RemovalPolicy.DESTROY,
-      stream: dynamodb.StreamViewType.NEW_AND_OLD_IMAGES,
+      stream: dynamodb.StreamViewType.KEYS_ONLY,
     });
     
     // GSI HandheldMacAddress

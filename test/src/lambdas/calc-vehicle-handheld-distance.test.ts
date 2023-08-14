@@ -1,11 +1,12 @@
 
 import { DynamoDBStreamEvent } from 'aws-lambda';
 import { calcVehicleHandheldDistanceLambdaHandler } from '../../../src/lambdas'
+import { VehicleToHandheldDAO } from '../../../src/dao/vehicle-to-handheld.dao';
 
 const dynamoDBStreamEventMock: DynamoDBStreamEvent = {
     Records: [{
         eventID: '1c0366d8ba1b73583933cf4327fd00f3',
-        eventName: 'INSERT',
+        eventName: 'MODIFY',
         eventVersion: '1.1',
         eventSource: 'aws:dynamodb',
         awsRegion: 'eu-central-1',
@@ -19,64 +20,46 @@ const dynamoDBStreamEventMock: DynamoDBStreamEvent = {
                     S: '74:0:86:0:0:0'
                 }
             },
-            NewImage: {
-                VehiclePosition: {
-                    M: {
-                        latitude: {
-                            N: '52.377735447258196'
-                        },
-                        lastUpdate: {
-                            S: '2023-08-12T21:46:47.231Z'
-                        },
-                        longitude: {
-                            N: '4.897365985806916'
-                        }
-                    }
-                },
-                HandheldPosition: {
-                    M: {
-                        latitude: {
-                            N: '52.37842481955316'
-                        },
-                        lastUpdate: {
-                            S: '2023-08-12T21:46:47.231Z'
-                        },
-                        longitude: {
-                            N: '4.897072283895077'
-                        }
-                    }
-                },
-                VehicleMacAddress: {
-                    S: '0:0:0:0:0:0'
-                },
-                HandheldMacAddress: {
-                    S: '74:0:86:0:0:0'
-                }
-            },
             SequenceNumber: '2974700000000010680290777',
             SizeBytes: 302,
-            StreamViewType: 'NEW_AND_OLD_IMAGES'
+            StreamViewType: 'KEYS_ONLY'
         },
         eventSourceARN: 'arn:aws:dynamodb:eu-central-1:305637164144:table/Vehicle2HandheldTable/stream/2023-08-12T19:59:12.863'
     }],
 }
 
 describe('calc distance between vehicle and handheld', () => {
-
-    it ('should send data to SNS', () => {
+    it ('should log the data to be sent to SNS', async () => {
         const event50mApartDelivery = {
             alertType: "50mApartDelivery",
             handheldId: '74:0:86:0:0:0',
             vehicleId: '0:0:0:0:0:0',
-            latitude: 52.377735447258196,
-            longitude: 4.897365985806916,
+            latitude: 52.3781094,
+            longitude: 4.8966216,
         }
 
+        const retrieveData = {
+            VehicleMacAddress: '0:0:0:0:0:0',
+            HandheldMacAddress: '74:0:86:0:0:0',
+            HandheldPosition: {
+                lastUpdate: '2023-08-14T07:25:45.013Z',
+                latitude: 52.9993999,
+                longitude: 4.9990999
+            },
+            VehiclePosition: {
+                lastUpdate: '2023-08-14T09:10:44.181Z',
+                latitude: 52.3781094,
+                longitude: 4.8966216
+            }
+        };
+
+        const getByVehicleMacAddressSpy = jest.spyOn(VehicleToHandheldDAO.prototype, 'getByVehicleMacAddress').mockImplementation(() => Promise.resolve(retrieveData));
         const consoleLogSpy = jest.spyOn(console, 'log');
 
-        calcVehicleHandheldDistanceLambdaHandler(dynamoDBStreamEventMock);
-        expect(consoleLogSpy).toBeCalledWith("SEND EVENT TO SNS");
+        await calcVehicleHandheldDistanceLambdaHandler(dynamoDBStreamEventMock);
+
         expect(consoleLogSpy).toBeCalledWith(event50mApartDelivery)
         consoleLogSpy.mockRestore();
+        getByVehicleMacAddressSpy.mockRestore();
     })
 })
