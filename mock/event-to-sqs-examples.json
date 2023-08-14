@@ -1,72 +1,72 @@
 [
   {
-    "vehicleId": "1:0:0:0:0:0",
-    "handheldId": "0:0:3:0:0:0",
-    "latitude": "52.3779914",
-    "longitude": "4.8967998",
-    "timestamp": "2023-08-13T17:35:34.874Z"
+    "vehicleId": "0:0:0:11:42:0",
+    "handheldId": "0:0:0:0:0:83",
+    "latitude": "52.3776117",
+    "longitude": "4.8968090",
+    "timestamp": "2023-08-14T07:25:45.014Z"
   },
   {
-    "vehicleId": "0:0:0:28:95:0",
-    "handheldId": "0:1:0:0:0:38",
-    "latitude": "52.3777554",
-    "longitude": "4.8972340",
-    "timestamp": "2023-08-13T17:35:34.874Z"
+    "vehicleId": "99:0:23:0:0:0",
+    "handheldId": "0:0:79:80:0:9",
+    "latitude": "52.3784453",
+    "longitude": "4.8969401",
+    "timestamp": "2023-08-14T07:25:45.014Z"
   },
   {
-    "vehicleId": "0:19:0:0:86:0",
-    "handheldId": "72:0:0:0:0:90",
-    "latitude": "52.3781348",
-    "longitude": "4.8969156",
-    "timestamp": "2023-08-13T17:35:34.874Z"
+    "vehicleId": "0:0:78:0:36:29",
+    "handheldId": "0:72:0:0:69:0",
+    "latitude": "52.3783138",
+    "longitude": "4.8966667",
+    "timestamp": "2023-08-14T07:25:45.014Z"
   },
   {
-    "vehicleId": "0:0:0:52:49:0",
-    "handheldId": "68:27:0:0:0:84",
-    "latitude": "52.3775806",
-    "longitude": "4.8970141",
-    "timestamp": "2023-08-13T17:35:34.874Z"
+    "vehicleId": "0:0:0:0:75:0",
+    "handheldId": "6:22:89:56:0:0",
+    "latitude": "52.3776983",
+    "longitude": "4.8965987",
+    "timestamp": "2023-08-14T07:25:45.014Z"
   },
   {
-    "vehicleId": "74:0:46:0:0:0",
-    "handheldId": "0:24:0:77:74:0",
-    "latitude": "52.3779031",
-    "longitude": "4.8972554",
-    "timestamp": "2023-08-13T17:35:34.874Z"
+    "vehicleId": "2:75:7:33:0:0",
+    "handheldId": "0:0:48:93:0:0",
+    "latitude": "52.3784452",
+    "longitude": "4.8971668",
+    "timestamp": "2023-08-14T07:25:45.014Z"
   },
   {
-    "vehicleId": "0:50:0:0:47:0",
-    "handheldId": "90:7:0:0:0:0",
-    "latitude": "52.3782000",
-    "longitude": "4.8967940",
-    "timestamp": "2023-08-13T17:35:34.874Z"
+    "vehicleId": "0:0:84:0:0:0",
+    "handheldId": "0:0:0:35:0:32",
+    "latitude": "52.3784166",
+    "longitude": "4.8974591",
+    "timestamp": "2023-08-14T07:25:45.014Z"
   },
   {
-    "vehicleId": "95:0:0:0:0:0",
-    "handheldId": "0:6:76:0:0:88",
-    "latitude": "52.3779506",
-    "longitude": "4.8975408",
-    "timestamp": "2023-08-13T17:35:34.874Z"
+    "vehicleId": "0:0:0:13:0:0",
+    "handheldId": "16:0:56:87:77:60",
+    "latitude": "52.3781978",
+    "longitude": "4.8965701",
+    "timestamp": "2023-08-14T07:25:45.014Z"
   },
   {
-    "vehicleId": "0:49:17:94:0:25",
-    "handheldId": "0:0:0:0:0:0",
-    "latitude": "52.3775056",
-    "longitude": "4.8970880",
-    "timestamp": "2023-08-13T17:35:34.874Z"
+    "vehicleId": "85:0:0:33:45:0",
+    "handheldId": "0:0:11:0:0:0",
+    "latitude": "52.3780797",
+    "longitude": "4.8970253",
+    "timestamp": "2023-08-14T07:25:45.014Z"
   },
   {
-    "vehicleId": "76:0:26:0:87:50",
-    "handheldId": "0:0:39:44:0:0",
-    "latitude": "52.3779546",
-    "longitude": "4.8971906",
-    "timestamp": "2023-08-13T17:35:34.874Z"
+    "vehicleId": "0:0:81:0:56:0",
+    "handheldId": "26:93:0:0:0:50",
+    "latitude": "52.3784185",
+    "longitude": "4.8973604",
+    "timestamp": "2023-08-14T07:25:45.014Z"
   },
   {
-    "vehicleId": "0:0:0:0:49:0",
-    "handheldId": "0:18:27:56:93:0",
-    "latitude": "52.3781646",
-    "longitude": "4.8966428",
-    "timestamp": "2023-08-13T17:35:34.874Z"
+    "vehicleId": "0:16:0:0:0:0",
+    "handheldId": "0:0:73:82:0:0",
+    "latitude": "52.3784307",
+    "longitude": "4.8973899",
+    "timestamp": "2023-08-14T07:25:45.014Z"
   }
 ]

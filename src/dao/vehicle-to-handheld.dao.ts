@@ -57,6 +57,8 @@ export class VehicleToHandheldDAO {
         },
       };
       
+      console.log(params);
+
       try {
         await this.dynamodb.update(params).promise();
       } catch (error) {
