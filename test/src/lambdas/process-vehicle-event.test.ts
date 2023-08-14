@@ -112,7 +112,7 @@ describe('process vehicle event', () => {
     await processVehicleEventLambdaHandler(event);
 
     expect(updateVehiclePositionSpy).toHaveBeenCalledTimes(1);
-    expect(new Date(updateVehiclePositionSpy.mock.calls[0][0].VehiclePosition.lastUpdate).getTime()).toBeGreaterThan(new Date(VehicleData.VehiclePosition.lastUpdate).getTime());
+    expect(updateVehiclePositionSpy.mock.calls[0][0].VehiclePosition.lastUpdate).toEqual('2025-12-10T16:45:39Z');
     updateVehiclePositionSpy.mockRestore();
     getByVehicleMacAddressSpy.mockRestore();
   });    

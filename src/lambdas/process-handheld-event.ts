@@ -27,7 +27,7 @@ export const handler = async (event: SQSEvent, context?: Context): Promise<void>
         return;
       }
 
-      handHeldData.VehiclePosition = {
+      handHeldData.HandheldPosition = {
         lastUpdate: body.timestamp,
         latitude: body.latitude,
         longitude: body.longitude

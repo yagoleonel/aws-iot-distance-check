@@ -111,7 +111,7 @@ describe('process handheld event', () => {
     await processHandheldEventLambdaHandler(event);
 
     expect(updateHandheldPositionSpy).toHaveBeenCalledTimes(1);
-    expect(new Date(updateHandheldPositionSpy.mock.calls[0][0].HandheldPosition.lastUpdate).getTime()).toBeGreaterThan(new Date(handheldData.HandheldPosition.lastUpdate).getTime());
+    expect(updateHandheldPositionSpy.mock.calls[0][0].HandheldPosition.lastUpdate).toEqual('2025-12-10T16:45:39Z');
     updateHandheldPositionSpy.mockRestore();
     getByHandheldMacAddressSpy.mockRestore();
   });    
