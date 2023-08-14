@@ -1,14 +1,24 @@
-# Welcome to your CDK TypeScript project
+# AWS IoT Check Distance Serverless Application
 
-This is a blank project for CDK development with TypeScript.
+This application is designed to read current positions (latitude, longitude) from IoT devices received via AWS IoT Core. The data is processed using SQS queues, Lambda functions, and DynamoDB streams.
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+![Architecture](architecture.png) <!-- Add a picture of the architecture here. Place the image file named "architecture.png" in the same directory as this README.md file. -->
 
-## Useful commands
+## Steps to Run
 
-* `npm run build`   compile typescript to js
-* `npm run watch`   watch for changes and compile
-* `npm run test`    perform the jest unit tests
-* `cdk deploy`      deploy this stack to your default AWS account/region
-* `cdk diff`        compare deployed stack with current state
-* `cdk synth`       emits the synthesized CloudFormation template
+1. Useful commands:
+
+    ```bash
+        npm install
+        npm package
+    ```
+  
+2. Deployment to AWS
+    ```bash
+     cdk deploy --profile <your_aws_profile>
+    ```
+    
+3. Testing
+    ```bash
+     npm run test
+    ```
