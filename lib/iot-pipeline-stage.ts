@@ -7,6 +7,6 @@ export class IOTDistanceCheckPipelineAppStage extends cdk.Stage {
     constructor(scope: Construct, id: string, props?: cdk.StageProps) {
       super(scope, id, props);
 
-      const lambdaStack = new IotDeviceDistanceCheckStack(this, 'IotDeviceDistanceCheckStack');
+      new IotDeviceDistanceCheckStack(this, 'IotDeviceDistanceCheckStack');
     }
 }
