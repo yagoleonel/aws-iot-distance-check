@@ -11,7 +11,7 @@ export class IOTDistanceCheckPipelineStack extends cdk.Stack {
       pipelineName: 'IOTDistanceCheckPipeline',
       synth: new ShellStep('Synth', {
         input: CodePipelineSource.gitHub('yagoleonel/aws-iot-distance-check', 'main'),
-        commands: ['npm install', 'npm run package', 'npx cdk synth']
+        commands: ['npm install', 'npm run test', 'npm run package', 'npx cdk synth']
       })
     });
 

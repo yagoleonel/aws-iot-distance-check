@@ -76,7 +76,7 @@ export class VehicleToHandheldDAO {
         Key: { VehicleMacAddress: primaryKey, HandheldMacAddress: sortKey }, // Primary key
         UpdateExpression: `SET ${field} = :position`,
         ExpressionAttributeValues: {
-          ':position': JSON.stringify(position),
+          ':position': position,
         },
       };
       await this.dynamodb.update(params).promise();

@@ -1,3 +1,8 @@
+import { processVehicleEventLambdaHandler } from '../../../src/lambdas'
+import { SQSEvent } from 'aws-lambda';
+import { randomUUID } from 'crypto';
+import { VehicleToHandheldDAO } from '../../../src/dao/vehicle-to-handheld.dao';
+
 const VehicleData = {
   VehicleMacAddress: "0:2:0:1:63:4",
   HandheldMacAddress: "0:0:0:35:0:0",
@@ -13,10 +18,6 @@ const VehicleData = {
   }
 };
 
-import { processVehicleEventLambdaHandler } from '../../../src/lambdas'
-import { SQSEvent } from 'aws-lambda';
-import { randomUUID } from 'crypto';
-import { VehicleToHandheldDAO } from '../../../src/dao/vehicle-to-handheld.dao';
 
 describe('process vehicle event', () => {
   it('should return as vehicle not found', async () => {
