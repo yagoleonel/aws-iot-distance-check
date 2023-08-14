@@ -50,7 +50,7 @@ export class VehicleToHandheldDAO {
 
       const params: AWS.DynamoDB.DocumentClient.UpdateItemInput = {
         TableName: this.tableName,
-        Key: { "VehicleMacAddress": primaryKey }, // Primary key
+        Key: AWS.DynamoDB.Converter.marshall({ "VehicleMacAddress": primaryKey }), // Primary key
         UpdateExpression: `SET VehiclePosition = :position`,
         ExpressionAttributeValues: {
           ':position': JSON.stringify(position),
