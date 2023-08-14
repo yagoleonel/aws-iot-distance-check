@@ -2,7 +2,7 @@
 
 This application is designed to read current positions (latitude, longitude) from IoT devices received via AWS IoT Core. The data is processed using SQS queues, Lambda functions, and DynamoDB streams.
 
-![Architecture](architecture.png) <!-- Add a picture of the architecture here. Place the image file named "architecture.png" in the same directory as this README.md file. -->
+![Architecture](./assets/architecture.png) <!-- Add a picture of the architecture here. Place the image file named "architecture.png" in the same directory as this README.md file. -->
 
 ## Steps to Run
 
