@@ -156,7 +156,10 @@ export class IotDeviceDistanceCheckStack extends cdk.Stack {
       code: lambda.Code.fromAsset('dist/'),
       handler: 'src/lambdas/calc-vehicle-handheld-distance.handler',
       runtime: lambda.Runtime.NODEJS_18_X,
-      retryAttempts: 2
+      retryAttempts: 2,
+      environment: {
+        VECHICLE_2_HANDHELD_TABLE_NAME: vehicle2HandheldTable.tableName,
+      }      
     });
     calcVehicleHandheldDistanceLambda.role?.attachInlinePolicy(checkHandheldDistanceSQSPolicy);
     calcVehicleHandheldDistanceLambda.role?.attachInlinePolicy(vehicle2HandheldTableDynamoPolicy);
